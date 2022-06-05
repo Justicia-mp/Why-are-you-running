@@ -9,7 +9,7 @@ import { updateMoney, setupMoney, getMoneyRects } from "./money.js"
 
 
 const WORLD_WIDTH = 100
-const WORLD_HEIGHT = 60
+const WORLD_HEIGHT = 35
 const SPEED_SCALE_INCREASE = 0.00001
 
 const worldElem = document.querySelector("[data-world]")
