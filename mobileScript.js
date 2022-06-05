@@ -1,166 +1,50 @@
-import { updateGround, setupGround } from "./ground.js"
-import { updateWoman, setupWoman, getWomanRect, setWomanLose } from "./mobileWoman.js"
-import { updateCar, setupCar, getCarRects } from "./car.js"
-import { updatePalm, setupPalm } from "./palm.js"
-import { updateCloud, setupCloud } from "./clouds.js"
-import { updateMoney, setupMoney, getMoneyRects } from "./money.js"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="why are you running? - game " content="“Why are you running?” - a game inspired by the funny nollywood meme “why are you running” and Chrome Dinosaur Game.  Press spacebar to jump and play! Can Monica run away from Mr man?  
+  Nollywood/nigerian film “Pretty Liars 1” - mobile version">
+  <title>Why are you running?</title>
+  <link rel="icon" type="image/x-icon" href="/imgs/woman-stationary.png">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="mobileScript.js" type="module"></script>
+</head>
+<body>
+    <div class="world" data-world>
+        <div class="score-name">score</div>
+        <div class="dollars" >$</div>
+        <div class="score" data-score>0</div>
+        <div class="money-name" data-money-name>0</div>
+        <div class="highscore" data-highscore>0</div>
+        <div class="end-screen" data-end-screen></div>
+        <img src="imgs/ground.png" class="ground" data-ground>
+        <img src="imgs/ground.png" class="ground" data-ground>
+        <img src="imgs/woman-stationary.png" class="woman" data-woman>
+      </div>
+  <div class="info">
+    <h1 class ="start-screen"data-start-screen>WHY ARE YOU RUNNING ?</h1>
+    <h2 class = "start1-screen"data-start-screen2>Press jump to start playing</h2>
+  </div>
+  <button id="jump-btn" onclick="mobJump()">JUMP</button>
+  <script src="mobileWoman.js"></script>
+    <div class="footer">
+      <a href="mailto:nbihstudios@gmail.com" target="_blank">contact</a>
+      <a href="https://www.nobadideashere.com" target="_blank">made by nbih</a> 
+      <a href="https://twitter.com/intent/tweet?text=Hello%20world">share on twitter</a>
+    </div>
+    <script>
+      var i = 0;
+      function change() {
+        var doc = document.getElementById("background");
+        var color = ["#cceafa", "#feeddc","#d0ffd4", "#fbddec"];
+        document.body.style.backgroundColor = color[i];
+        i = (i + 1) % color.length;
+      }
+      setInterval(change, 20000);
+      </script>
+</body>
 
-
-
-
-const WORLD_WIDTH = 100
-const WORLD_HEIGHT = 35
-const SPEED_SCALE_INCREASE = 0.00001
-
-const worldElem = document.querySelector("[data-world]")
-const scoreElem = document.querySelector("[data-score]")
-const moneyElem = document.querySelector("[data-money-name]")
-const highScoreElem = document.querySelector("[data-highscore]")
-const startScreenElem = document.querySelector("[data-start-screen]")
-const startScreen2Elem = document.querySelector("[data-start-screen2]")
-const endScreenElem = document.querySelector("[data-end-screen]")
-
-
-setPixelToWorldScale()
-window.addEventListener("resize", setPixelToWorldScale)
-document.addEventListener("click", handleStart, { once: true })
-
-let money
-let lastTime
-let speedScale
-let score
-let endScreen = document.querySelector("[data-end-screen]")
-function update(time) {
-  if (lastTime == null) {
-    lastTime = time
-    window.requestAnimationFrame(update)
-    return
-  }
-  
-  const delta = time - lastTime
-  updateMoney(delta, speedScale)
-  updateGround(delta, speedScale)
-  updateWoman(delta, speedScale)
-  updateCar(delta, speedScale)
-  updatePalm(delta, speedScale)
-  updateSpeedScale(delta)
-  updateScore(delta)
-  updateCloud(delta,speedScale)
-  if (checkLose()) return handleLose()
-  if (checkMoney()) return moneyColl(setupMoney())
-
-  lastTime = time
-  window.requestAnimationFrame(update)
-}
-
-
-function checkLose() {
-  const womanRect = getWomanRect()
-  return getCarRects().some(rect => isCollision(rect, womanRect))
-
-}
-
-function checkMoney() {
-    const womanRect = getWomanRect()
-    return getMoneyRects().some(rect => isCollision(rect, womanRect))
-}
-
-function moneyColl() {
-    setWomanLose()
-    window.requestAnimationFrame(update)
-    upMon()
-}
-  
-function upMon(){
-    money += 10
-    moneyElem.textContent = money
-}
-
-
-function isCollision(rect1, rect2) {
-  return (
-    rect1.left < rect2.right &&
-    rect1.top < rect2.bottom &&
-    rect1.right > rect2.left &&
-    rect1.bottom > rect2.top
-  )
-  
-}
-
-function updateSpeedScale(delta) {
-  speedScale += delta * SPEED_SCALE_INCREASE
-}
-
-let highScore
-let offHighScore
-
-
-function updateHScore(){
-  highScore = localStorage.getItem('score')
-  highScoreElem.textContent =Math.floor(highScore)  
-  offHighScore = highScoreElem.textContent
-}
-
-
-function updateScore(delta) {
-  let officialScore=score += delta * 0.01
-  scoreElem.textContent = Math.floor(officialScore)
-  localStorage.setItem('score', officialScore)
-}
-console.log(localStorage)
-console.log(highScore)
-
-function handleStart() {
-  lastTime = null
-  speedScale = 1
-  score = 0
-  money = 0
-  moneyElem.textContent = "0"
-  highScore = 0
-  setupMoney()
-  updateHScore()
-  setupGround()
-  setupWoman()
-  setupCar()
-  setupPalm()
-  setupCloud()
-  startScreenElem.classList.add("hide")
-  startScreen2Elem.classList.add("hide")
-  endScreenElem.classList.add("hide")
-  
-  window.requestAnimationFrame(update)
-}
-
-function setPixelToWorldScale() {
-    let worldToPixelScale
-    if (window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT) {
-      worldToPixelScale = window.innerWidth / WORLD_WIDTH
-    } else {
-      worldToPixelScale = window.innerHeight / WORLD_HEIGHT
-    }
-  
-    worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`
-    worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`
-  }
-  
-
-function handleLose() {
-  setWomanLose()
-
-  setTimeout(() => {
-    document.addEventListener("click", handleStart, { once: true })
-   
-    endScreenElem.classList.remove("hide")
-    endScreen.textContent ="GAME OVER"
-  }, 100)
-
-  function soundEnd(){
-    var audio = new Audio('audio/War.mp3');
-    audio.play();
-    audio.volume = 0.1
-  }
-  soundEnd()
-
-
-}
-
+</a>
+</html>
