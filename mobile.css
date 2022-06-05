@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  body {
+    display: block;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    background-color:#cceafa ;
+  
+  }
+
+  .world {
+    overflow: hidden;
+    position: relative;
+    margin-top: 10vh;
+    top: 10vmin;
+    margin-left: auto;
+    margin-right: auto;
+    width:  90vmin;
+    height: 20vh;
+  }
+
+  .score-name {
+    position: absolute;
+    font-size: 1.8vmin;
+    color: #e94e1b;
+    right: 45vmin;
+    margin-left: 2vh;
+ 
+  }
+  
+  .dollars {
+    position: absolute;
+    font-size: 1.8vmin;
+    color: #e94e1b;
+    right: 38vmin;
+    margin-left: 2vh;
+
+  }
+
+  
+  .money-name {
+    position: absolute;
+    font-size: 1.8vmin;
+    color: #e94e1b;
+    right: 32vmin;
+    margin-left: 2vh;
+
+  
+  }
+  
+  .score {
+    position: absolute;
+    font-size: 1.8vmin;
+    color: #e94e1b;
+    right: 22vmin;
+    margin-left: 2vh;
+
+  }
+  
+  .highscore {
+    position: absolute;
+    font-size: 1.8vmin;
+    color: #ff8725;
+    right: 10vmin;
+    margin-left: 2vh;
+
+  }
+
+
+
+.info{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vmin;
+  width: 100%;
+  bottom: 10%;
+  padding: 10px;
+  text-align: center;
+}
+
+#muteBtn {
+  position: absolute;
+  font-size: 1.2vmin;
+  color: #e94e1b;
+  left:0;
+  margin-left: 2vh;
+  top: 10%;
+  width: 70px;
+}
+
+.onBtn{
+  width: 12px;
+  top: 10%;
+}
+
+.offBtn{
+  width: 12px;
+  top: 10%;
+}
+
+.end-screen{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  color: #e94e1b;
+  margin-bottom: 15vh;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+
+}
+
+
+
+.start-screen{
+    font-size: 3vmin;
+    color: white;
+    animation: opacity 2.9s ease-in-out infinite;
+    opacity: 1;
+  }
+  
+  .start1-screen{
+    font-size: 1.2vmin;
+    
+    color: rgb(105, 105, 105);
+  
+  }
+  
+
+
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.hide {
+  display: none;
+}
+
+.end-screen{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    color: #e94e1b;
+    margin-bottom: 15vh;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  
+  }
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 200%;
+  bottom: 0;
+  left: calc(var(--left) * 1%)
+}
+
+
+.palm {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 10vmin;
+    bottom: 0.6vh;
+  }
+  
+  .palmBig{
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 16vmin;
+    bottom: 0.5vh;
+  
+  }
+  
+  .cloud {
+    --left:0;
+    position: absolute;
+    height: 1.6vh;
+    top: 3vh;
+    left: calc(var(--left) * 1%);
+  
+  }
+  
+  .cloud1 {
+    --left:0;
+    position: absolute;
+    height: 1.5vh;
+    top: 3vh;
+    left: calc(var(--left) * 1.4%);
+  
+  }
+  
+  .cloud2 {
+    --left:0;
+    position: absolute;
+    height: 1.8vh;
+    top: 6vh;
+    left: calc(var(--left) * 1.8%);
+  
+  }
+  
+  .woman {
+    --bottom: 0;
+    position: absolute;
+    left: 10%;
+    height: 7.5vmin;
+    bottom: calc(var(--bottom) * 1%);
+  }
+  .car {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 3.2vmin;
+    bottom: 0vh;
+  }
+
+  .money {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 4%;
+    bottom: 12vh;
+    animation: money 2s ease infinite;
+  }
+  
+@keyframes money {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+
+#jump-btn {
+    position: fixed;
+    margin-left:10%;
+    margin-right: 10%;
+    padding: 3.5vh;
+    bottom:18vh;
+    width: 80%;
+    border: 0.2px solid rgb(193, 192, 192);
+    color: rgb(105, 105, 105);
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 3px;
+    
+  }
+
+  .footer {
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom:2vh;
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  .footer a{
+    margin: auto;
+    text-align: center;
+    color: rgb(105, 105, 105);
+    padding:0 2%;
+    font-size: 0.8vh;
+  }
+
+
