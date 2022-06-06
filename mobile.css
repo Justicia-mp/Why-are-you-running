@@ -245,7 +245,11 @@ html, body {
     bottom:10vh;
     width: 80%;
     border: none;
+<<<<<<< HEAD
     color: #0d8ede;
+=======
+    color: #0000FF;
+>>>>>>> d0ce8b148c70ba08a33b3a8c29e5f6d997fad1d2
     border-radius: 12px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
