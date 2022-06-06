@@ -37,12 +37,12 @@
     <script>
       var i = 0;
       function change() {
-        var doc = document.getElementById("background");
-        var color = ["#cceafa", "#f9dfc5","#d0ffd4", "#fbddec"];
-        document.body.style.backgroundColor = color[i];
+        var doc = document.getElementById("world");
+        var color = ["#cceafa", "#feeddc","#d0ffd4", "#fbddec"];
+        doc.style.backgroundColor = color[i];
         i = (i + 1) % color.length;
       }
-      setInterval(change, 30000);
+      setInterval(change, 4000);
       </script>
 </body>
 
