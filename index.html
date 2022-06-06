@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKP6S5THS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VKP6S5THS0');
+</script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="why are you running? - game " content="“Why are you running?” - a game inspired by the funny nollywood meme “why are you running” and Chrome Dinosaur Game.  Press spacebar to jump and play! Can Monica run away from Mr man?  
@@ -17,7 +26,7 @@
       </script>
 </head>
 <body>
-  <div class="world" data-world>
+  <div class="world" id="world" data-world>
     <div id="muteBtn"><img src="imgs/on.png" width="18%"></div>
     <div class="score-name">score</div>
     <div class="dollars" >$</div>
@@ -42,9 +51,9 @@
     <script>
       var i = 0;
       function change() {
-        var doc = document.getElementById("background");
+        var doc = document.getElementById("world");
         var color = ["#cceafa", "#feeddc","#d0ffd4", "#fbddec"];
-        document.body.style.backgroundColor = color[i];
+        doc.style.backgroundColor = color[i];
         i = (i + 1) % color.length;
       }
       setInterval(change, 25000);
