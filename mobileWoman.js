@@ -73,12 +73,12 @@ function mobJump(){
   yVelocity = JUMP_SPEED
   isJumping = true
 
-  function soundEnd(){
+  function soundJump(){
     var audio = new Audio('audio/jump.mp3');
     audio.play();
     audio.volume = 0.05;
    
   }
-  soundEnd()
+  soundJump()
 
 }

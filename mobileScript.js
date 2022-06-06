@@ -5,11 +5,8 @@ import { updatePalm, setupPalm } from "./palm.js"
 import { updateCloud, setupCloud } from "./clouds.js"
 import { updateMoney, setupMoney, getMoneyRects } from "./mobileMoney.js"
 
-
-
-
 const WORLD_WIDTH = 100
-const WORLD_HEIGHT = 35
+const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = 0.00001
 
 const worldElem = document.querySelector("[data-world]")
@@ -69,6 +66,13 @@ function moneyColl() {
     setWomanLose()
     window.requestAnimationFrame(update)
     upMon()
+    function soundCoin(){
+      var audio = new Audio('audio/coin.wav');
+      audio.play();
+      audio.volume = 0.05;
+     
+    }
+    soundCoin()
 }
   
 function upMon(){
@@ -163,4 +167,3 @@ function handleLose() {
 
 
 }
-
