@@ -227,7 +227,7 @@ html, body {
     --bottom: 0;
     position: absolute;
     left: 10%;
-    height: 7.5vmin;
+    height: 8.5vmin;
     bottom: calc(var(--bottom) * 1%);
   }
   .car {
