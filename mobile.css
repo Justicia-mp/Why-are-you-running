@@ -239,14 +239,14 @@ html, body {
 
 #jump-btn {
     position: fixed;
-    margin-left:10%;
-    margin-right: 10%;
-    padding: 3.5vh;
+    margin-left:3.5%;
+    margin-right: 0%;
+    padding: 4vh;
     bottom:10vh;
-    width: 80%;
+    width: 90%;
     border: none;
-    color: #0d8ede;
-    border-radius: 25px;
+    color: #19a2f7;
+    border-radius: 20px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     letter-spacing: 3px;
