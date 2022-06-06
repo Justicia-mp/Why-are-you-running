@@ -69,6 +69,13 @@ function moneyColl() {
     setWomanLose()
     window.requestAnimationFrame(update)
     upMon()
+    function soundCoin(){
+      var audio = new Audio('audio/coin.wav');
+      audio.play();
+      audio.volume = 0.1
+    }
+    soundCoin()
+  
 }
   
 function upMon(){

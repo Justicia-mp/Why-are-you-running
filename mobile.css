@@ -23,7 +23,7 @@ html, body {
     overflow: hidden;
     position: relative;
     margin-top: 10vh;
-    top: 10vmin;
+    top: 0vmin;
     margin-left: auto;
     margin-right: auto;
     width:  90vmin;
@@ -90,38 +90,6 @@ html, body {
   text-align: center;
 }
 
-#muteBtn {
-  position: absolute;
-  font-size: 1.2vmin;
-  color: #e94e1b;
-  left:0;
-  margin-left: 2vh;
-  top: 10%;
-  width: 70px;
-}
-
-.onBtn{
-  width: 12px;
-  top: 10%;
-}
-
-.offBtn{
-  width: 12px;
-  top: 10%;
-}
-
-.end-screen{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-  color: #e94e1b;
-  margin-bottom: 15vh;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-
-}
-
 
 
 .start-screen{
@@ -132,7 +100,7 @@ html, body {
   }
   
   .start1-screen{
-    font-size: 1.2vmin;
+    font-size: 1.5vmin;
     
     color: rgb(105, 105, 105);
   
@@ -163,7 +131,7 @@ html, body {
 .end-screen{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5vh;
+    margin-top: 7vh;
     color: #e94e1b;
     margin-bottom: 15vh;
     width: 100%;
@@ -227,7 +195,7 @@ html, body {
     --bottom: 0;
     position: absolute;
     left: 10%;
-    height: 7.5vmin;
+    height: 8.5vmin;
     bottom: calc(var(--bottom) * 1%);
   }
   .car {
@@ -241,7 +209,7 @@ html, body {
     position: absolute;
     left: calc(var(--left) * 1%);
     height: 4%;
-    bottom: 10vh;
+    bottom: 13vh;
     animation: money 2s ease infinite;
   }
   
@@ -277,7 +245,7 @@ html, body {
     bottom:10vh;
     width: 80%;
     border: none;
-    color: #4850df;
+    color: #0d8ede;
     border-radius: 12px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
