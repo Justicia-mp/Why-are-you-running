@@ -4,7 +4,7 @@ import {
   getCustomProperty,
 } from "./updateCustomProperty.js"
 
-const SPEED = 0.052
+const SPEED = 0.05
 const CAR_INTERVAL_MIN = 500
 const CAR_INTERVAL_MAX = 2000
 const worldElem = document.querySelector("[data-world]")

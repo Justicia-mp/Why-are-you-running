@@ -6,7 +6,7 @@ import {
 
 const womanElem = document.querySelector("[data-woman]")
 const JUMP_SPEED = 0.45
-const GRAVITY = 0.0022
+const GRAVITY = 0.002
 const WOMAN_FRAME_COUNT = 2
 const FRAME_TIME = 100
 

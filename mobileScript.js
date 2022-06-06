@@ -1,9 +1,9 @@
 import { updateGround, setupGround } from "./ground.js"
 import { updateWoman, setupWoman, getWomanRect, setWomanLose } from "./mobileWoman.js"
-import { updateCar, setupCar, getCarRects } from "./car.js"
+import { updateCar, setupCar, getCarRects } from "./mobileCar.js"
 import { updatePalm, setupPalm } from "./palm.js"
 import { updateCloud, setupCloud } from "./clouds.js"
-import { updateMoney, setupMoney, getMoneyRects } from "./money.js"
+import { updateMoney, setupMoney, getMoneyRects } from "./mobileMoney.js"
 
 
 

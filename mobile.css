@@ -233,7 +233,7 @@ html, body {
   .car {
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 3.2vmin;
+    height: 3.1vmin;
     bottom: 0vh;
   }
 
@@ -241,7 +241,7 @@ html, body {
     position: absolute;
     left: calc(var(--left) * 1%);
     height: 4%;
-    bottom: 12vh;
+    bottom: 10vh;
     animation: money 2s ease infinite;
   }
   
@@ -274,10 +274,10 @@ html, body {
     margin-left:10%;
     margin-right: 10%;
     padding: 3.5vh;
-    bottom:18vh;
+    bottom:10vh;
     width: 80%;
-    border: 0.2px solid rgb(193, 192, 192);
-    color: rgb(105, 105, 105);
+    border: none;
+    color: #4850df;
     border-radius: 12px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
