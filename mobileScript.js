@@ -161,7 +161,8 @@ function handleLose() {
   function soundEnd(){
     var audio = new Audio('audio/War.mp3');
     audio.play();
-    audio.volume = 0.1
+    audio.volume = 0.1;
+    audio.preload = 'auto';
   }
   soundEnd()
 
