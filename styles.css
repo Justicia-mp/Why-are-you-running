@@ -206,7 +206,7 @@ body {
 .car {
   position: absolute;
   left: calc(var(--left) * 1%);
-  height: 1.82vmin;
+  height: 1.81vmin;
   bottom: 0vh;
 }
 
