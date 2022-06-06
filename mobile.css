@@ -152,14 +152,14 @@ html, body {
 .palm {
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 10vmin;
+    height: 9vmin;
     bottom: 0.6vh;
   }
   
   .palmBig{
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 16vmin;
+    height: 14vmin;
     bottom: 0.5vh;
   
   }
