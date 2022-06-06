@@ -152,14 +152,14 @@ html, body {
 .palm {
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 10vmin;
+    height: 9vmin;
     bottom: 0.6vh;
   }
   
   .palmBig{
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 16vmin;
+    height: 14vmin;
     bottom: 0.5vh;
   
   }
@@ -245,12 +245,8 @@ html, body {
     bottom:10vh;
     width: 80%;
     border: none;
-<<<<<<< HEAD
     color: #0d8ede;
-=======
-    color: #0000FF;
->>>>>>> d0ce8b148c70ba08a33b3a8c29e5f6d997fad1d2
-    border-radius: 12px;
+    border-radius: 25px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     letter-spacing: 3px;
