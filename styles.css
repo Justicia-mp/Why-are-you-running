@@ -91,7 +91,7 @@ body {
 .end-screen{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top: 14vh;
   color: #e94e1b;
   margin-bottom: 15vh;
   width: 100%;
@@ -200,13 +200,13 @@ body {
   --bottom: 0;
   position: absolute;
   left: 10%;
-  height: 4vmin;
+  height: 4.5vmin;
   bottom: calc(var(--bottom) * 1%);
 }
 .car {
   position: absolute;
   left: calc(var(--left) * 1%);
-  height: 1.9vmin;
+  height: 1.82vmin;
   bottom: 0vh;
 }
 
