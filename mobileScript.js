@@ -41,6 +41,7 @@ function update(time) {
   updateCar(delta, speedScale)
   updatePalm(delta, speedScale)
   updateSpeedScale(delta)
+  audio.BACK.play()
   updateScore(delta)
   updateCloud(delta,speedScale)
   if (checkLose()) return handleLose()
@@ -166,5 +167,12 @@ function handleLose() {
   }
   soundEnd()
 
+
+}
+
+
+
+var audio = {
+  BACK: new Audio ('audio/WAYR.mp3')
 
 }
