@@ -44,6 +44,7 @@ function update(time) {
   updateCar(delta, speedScale)
   updatePalm(delta, speedScale)
   updateSpeedScale(delta)
+  audio.BACK.play()
   updateScore(delta)
   updateCloud(delta,speedScale)
   audio.BACK.play()
@@ -168,6 +169,7 @@ var audio = {
 
 }
 
+<<<<<<< HEAD
 function toggleMute() {
   for (var i in audio) {
     if (audio[i].muted = !audio[i].muted){
@@ -178,3 +180,11 @@ function toggleMute() {
     
   }
 }
+=======
+
+
+var audio = {
+  BACK: new Audio ('audio/WAYR.mp3')
+
+}
+>>>>>>> dff6508b749b952a98360ed97fe2bb88dc1b98cf
