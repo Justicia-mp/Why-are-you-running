@@ -41,6 +41,7 @@ function update(time) {
   updateCar(delta, speedScale)
   updatePalm(delta, speedScale)
   updateSpeedScale(delta)
+  audio.BACK.play()
   updateScore(delta)
   updateCloud(delta,speedScale)
   if (checkLose()) return handleLose()
@@ -125,6 +126,7 @@ function handleStart() {
   setupCar()
   setupPalm()
   setupCloud()
+  
   startScreenElem.classList.add("hide")
   startScreen2Elem.classList.add("hide")
   endScreenElem.classList.add("hide")
@@ -153,7 +155,8 @@ function handleLose() {
 var audio = {
   LOSE: new Audio ('audio/war.mp3'),
   JUMP: new Audio ('audio/jump.mp3'),
-  COIN: new Audio ('audio/coin.wav')
+  COIN: new Audio ('audio/coin.wav'),
+  BACK: new Audio ('audio/WAYR.mp3')
 
 }
 

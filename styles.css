@@ -214,8 +214,8 @@ body {
 .money {
   position: absolute;
   left: calc(var(--left) * 1%);
-  height: 5%;
-  bottom: 10vh;
+  height: 3.5%;
+  bottom: 12vh;
   animation: money 2s ease infinite;
 }
 @keyframes money {
