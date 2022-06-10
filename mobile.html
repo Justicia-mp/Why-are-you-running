@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="mobile.css">
   <script src="mobileScript.js" type="module"></script>
 </head>
+
 <body>
   <audio src="/audio/WAYR.mp3" autoplay></audio>
     <div class="world" id="world" data-world>
@@ -45,6 +46,19 @@
       <a href="https://www.nobadideashere.com" target="_blank">made by nbih</a> 
       <a href="https://twitter.com/intent/tweet?text=play%20why%20are%20you%20running?!%20www.whyareurunning.com">share on twitter</a>
     </div>
+<<<<<<< HEAD
+=======
+    <script>
+      var i = 0;
+      function change() {
+        var doc = document.getElementById("world");
+        var color = ["#cceafa", "#feeddc","#d0ffd4", "#fbddec"];
+        doc.style.backgroundColor = color[i];
+        i = (i + 1) % color.length;
+      }
+      setInterval(change, 25000);
+      </script>
+>>>>>>> b12b3f6fac55a623b4320742c995187d4ecda7a9
 </body>
 
 </a>
