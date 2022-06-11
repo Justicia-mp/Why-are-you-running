@@ -41,12 +41,12 @@ function update(time) {
   updateCar(delta, speedScale)
   updatePalm(delta, speedScale)
   updateSpeedScale(delta)
-  audio.BACK.play()
   updateScore(delta)
+  audio.BACK.play()
   updateCloud(delta,speedScale)
   if (checkLose()) return handleLose()
   if (checkMoney()) return moneyColl(setupMoney())
-
+  
   lastTime = time
   window.requestAnimationFrame(update)
 }
@@ -126,7 +126,6 @@ function handleStart() {
   setupCar()
   setupPalm()
   setupCloud()
-  
   startScreenElem.classList.add("hide")
   startScreen2Elem.classList.add("hide")
   endScreenElem.classList.add("hide")
