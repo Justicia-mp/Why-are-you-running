@@ -145,9 +145,6 @@ function handleLose() {
     
   }, 100)
   audio.LOSE.play();
-  
- 
-
 }
 
 
@@ -157,7 +154,6 @@ var audio = {
   JUMP: new Audio ('audio/jump.mp3'),
   COIN: new Audio ('audio/coin.wav'),
   BACK: new Audio ('audio/WAYR.mp3')
-
 }
 
 function toggleMute() {
