@@ -149,7 +149,7 @@ function handleLose() {
 
 
 var audio = {
-  LOSE: new Audio ('audio/war.mp3'),
+  LOSE: new Audio ('audio/War.mp3'),
   JUMP: new Audio ('audio/jump.mp3'),
   COIN: new Audio ('audio/coin.wav'),
   BACK: new Audio ('audio/WAYR.mp3')
