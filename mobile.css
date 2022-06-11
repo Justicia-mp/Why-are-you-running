@@ -142,26 +142,6 @@ html, body {
   
   }
 
-  #muteBtn {
-    position: absolute;
-    font-size: 1.2vmin;
-    color: #e94e1b;
-    left:0;
-    margin-left: 2vh;
-    top: 0%;
-    width: 60px;
-  }
-  
-  .onBtn{
-    width: 12px;
-    top: 10%;
-  }
-  
-  .offBtn{
-    width: 12px;
-    top: 10%;
-  }
-
 .ground {
   --left: 0;
   position: absolute;
@@ -292,5 +272,3 @@ html, body {
     padding:0 2%;
     font-size: 0.8vh;
   }
-
-

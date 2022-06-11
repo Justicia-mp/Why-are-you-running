@@ -16,9 +16,6 @@ const highScoreElem = document.querySelector("[data-highscore]")
 const startScreenElem = document.querySelector("[data-start-screen]")
 const startScreen2Elem = document.querySelector("[data-start-screen2]")
 const endScreenElem = document.querySelector("[data-end-screen]")
-const soundBtn = document.getElementById("muteBtn"); 
-
-soundBtn.addEventListener("click", toggleMute)
 
 
 setPixelToWorldScale()
@@ -47,7 +44,6 @@ function update(time) {
   audio.BACK.play()
   updateScore(delta)
   updateCloud(delta,speedScale)
-  audio.BACK.play()
   if (checkLose()) return handleLose()
   if (checkMoney()) return moneyColl(setupMoney())
 
@@ -71,7 +67,13 @@ function moneyColl() {
     setWomanLose()
     window.requestAnimationFrame(update)
     upMon()
-    audio.COIN.play();
+    function soundCoin(){
+      var audio = new Audio('audio/coin.wav');
+      audio.play();
+      audio.volume = 0.05;
+     
+    }
+    soundCoin()
 }
   
 function upMon(){
@@ -156,26 +158,21 @@ function handleLose() {
     endScreenElem.classList.remove("hide")
     endScreen.textContent ="GAME OVER"
   }, 100)
-  audio.LOSE.play();
+
+  function soundEnd(){
+    var audio = new Audio('audio/War.mp3');
+    audio.play();
+    audio.volume = 0.1;
+    audio.preload = 'auto';
+  }
+  soundEnd()
 
 
 }
+
+
 
 var audio = {
-  LOSE: new Audio ('audio/war.mp3'),
-  JUMP: new Audio ('audio/jump.mp3'),
-  COIN: new Audio ('audio/coin.wav'),
   BACK: new Audio ('audio/WAYR.mp3')
 
-}
-
-function toggleMute() {
-  for (var i in audio) {
-    if (audio[i].muted = !audio[i].muted){
-      soundBtn.innerHTML = "<img src='imgs/off.png' class='onBtn'>";
-    }else {
-      soundBtn.innerHTML = "<img src='imgs/on.png' class='offBtn'>";
-    }
-    
-  }
 }

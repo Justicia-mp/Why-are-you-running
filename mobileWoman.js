@@ -72,21 +72,13 @@ function mobJump(){
 
   yVelocity = JUMP_SPEED
   isJumping = true
-  audio.JUMP.play()
 
-}
-
-var audio = {
-  JUMP: new Audio ('audio/jump.mp3')
-
-}
-
-function toggleMute() {
-  for (var i in audio) {
-    audio[i].muted = !audio[i].muted;
+  function soundJump(){
+    var audio = new Audio('audio/jump.mp3');
+    audio.play();
+    audio.volume = 0.05;
+   
   }
+  soundJump()
+
 }
-
-
-const soundBtn = document.getElementById("muteBtn"); 
-soundBtn.addEventListener("click", toggleMute)
