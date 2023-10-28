@@ -5,7 +5,7 @@ import {
 } from "./updateCustomProperty.js"
 
 const womanElem = document.querySelector("[data-woman]")
-const JUMP_SPEED = 0.5
+const JUMP_SPEED = 0.7
 const GRAVITY = 0.002
 const WOMAN_FRAME_COUNT = 2
 const FRAME_TIME = 100
